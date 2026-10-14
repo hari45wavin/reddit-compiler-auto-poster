@@ -1,0 +1,625 @@
+/* 🌸 Gen-Z Cute Translucent Aesthetic - Compiler Floating Widget 🌸 */
+
+.rcap-compiler-widget {
+  position: fixed !important;
+  bottom: 20px !important;
+  right: 20px !important;
+  z-index: 2147483640 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-end !important;
+  gap: 8px !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Plus Jakarta Sans", sans-serif !important;
+  box-sizing: border-box !important;
+  outline: none !important;
+  pointer-events: auto !important;
+}
+
+/* 🌸 Collapsed State vs Expanded State 🌸 */
+.rcap-compiler-widget.rcap-is-collapsed .rcap-expanded-bar {
+  display: none !important;
+}
+
+.rcap-compiler-widget.rcap-is-expanded .rcap-anime-btn {
+  display: none !important;
+}
+
+/* 🌸 1. Cute Anime Reddit Icon (Collapsed Button) 🌸 */
+.rcap-anime-btn {
+  position: relative !important;
+  width: 50px !important;
+  height: 50px !important;
+  border-radius: 50% !important;
+  background: rgba(28, 18, 44, 0.72) !important;
+  backdrop-filter: blur(16px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(16px) saturate(180%) !important;
+  border: 1.5px solid rgba(255, 117, 143, 0.55) !important;
+  box-shadow: 0 8px 24px rgba(12, 6, 20, 0.6), 0 0 16px rgba(255, 117, 143, 0.35) !important;
+  cursor: pointer !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0 !important;
+  transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+  animation: rcapAnimeFloat 3s ease-in-out infinite !important;
+  user-select: none !important;
+  outline: none !important;
+}
+
+.rcap-anime-btn:hover {
+  transform: translateY(-3px) scale(1.1) !important;
+  border-color: #FF758F !important;
+  background: rgba(36, 22, 56, 0.82) !important;
+  box-shadow: 0 12px 30px rgba(12, 6, 20, 0.75), 0 0 24px rgba(255, 117, 143, 0.55) !important;
+}
+
+.rcap-anime-btn:active {
+  transform: scale(0.94) !important;
+}
+
+.rcap-anime-svg-wrap {
+  width: 38px !important;
+  height: 38px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.rcap-anime-svg {
+  width: 100% !important;
+  height: 100% !important;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.25)) !important;
+}
+
+/* Floating Hotkey Tag on Collapsed Icon */
+.rcap-anime-badge {
+  position: absolute !important;
+  top: -5px !important;
+  right: -5px !important;
+  background: linear-gradient(135deg, rgba(255, 93, 143, 0.95) 0%, rgba(199, 125, 255, 0.95) 100%) !important;
+  color: #FFFFFF !important;
+  font-size: 8.5px !important;
+  font-weight: 800 !important;
+  padding: 1.5px 5.5px !important;
+  border-radius: 9999px !important;
+  border: 1px solid rgba(255, 255, 255, 0.35) !important;
+  box-shadow: 0 2px 6px rgba(255, 93, 143, 0.45) !important;
+  white-space: nowrap !important;
+  pointer-events: none !important;
+  letter-spacing: 0.2px !important;
+}
+
+@keyframes rcapAnimeFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+/* 🌸 2. Minimized & Translucent Expanded Toolbar 🌸 */
+.rcap-expanded-bar {
+  display: flex !important;
+  flex-direction: column !important;
+  background: rgba(22, 14, 36, 0.52) !important;
+  backdrop-filter: blur(20px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
+  color: #FFFFFF !important;
+  padding: 8px 10px !important;
+  border-radius: 18px !important;
+  border: 1.5px solid rgba(255, 117, 143, 0.4) !important;
+  box-shadow: 0 12px 36px rgba(10, 4, 18, 0.55), 0 0 20px rgba(255, 117, 143, 0.25) !important;
+  user-select: none !important;
+  animation: rcapPopIn 0.22s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+  box-sizing: border-box !important;
+  gap: 6px !important;
+}
+
+@keyframes rcapPopIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* 🌸 Layout Modes: Horizontal vs Vertical 🌸 */
+
+/* Horizontal Layout (Compact row) */
+.rcap-orientation-horizontal .rcap-expanded-bar {
+  max-width: 360px !important;
+}
+
+.rcap-orientation-horizontal .rcap-actions-container {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  gap: 6px !important;
+  width: 100% !important;
+}
+
+/* Vertical Layout (Sleek side dock) */
+.rcap-orientation-vertical .rcap-expanded-bar {
+  width: 165px !important;
+}
+
+.rcap-orientation-vertical .rcap-actions-container {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: stretch !important;
+  gap: 5px !important;
+  width: 100% !important;
+}
+
+.rcap-orientation-vertical .rcap-mini-controls {
+  justify-content: flex-end !important;
+  order: -1 !important;
+  margin-bottom: 2px !important;
+}
+
+/* Action Buttons Base */
+.rcap-action-btn {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 5px !important;
+  padding: 6px 11px !important;
+  border-radius: 9999px !important;
+  font-size: 11px !important;
+  font-weight: 800 !important;
+  cursor: pointer !important;
+  border: none !important;
+  transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+  white-space: nowrap !important;
+  box-sizing: border-box !important;
+  position: relative !important;
+  outline: none !important;
+}
+
+.rcap-num-tag {
+  background: rgba(0, 0, 0, 0.28) !important;
+  color: #FFFFFF !important;
+  font-size: 9px !important;
+  font-weight: 800 !important;
+  width: 15px !important;
+  height: 15px !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-shrink: 0 !important;
+}
+
+.rcap-btn-label {
+  letter-spacing: 0.2px !important;
+}
+
+.rcap-kbd-focused {
+  outline: 2px solid #FFD166 !important;
+  box-shadow: 0 0 12px rgba(255, 209, 102, 0.8) !important;
+  transform: translateY(-2px) scale(1.05) !important;
+}
+
+/* Button 1: Share to Reddit */
+.rcap-btn-share {
+  background: linear-gradient(135deg, rgba(255, 93, 143, 0.9) 0%, rgba(255, 117, 143, 0.9) 100%) !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 3px 10px rgba(255, 93, 143, 0.4) !important;
+  flex: 1.1 !important;
+}
+
+.rcap-btn-share:hover {
+  transform: translateY(-2px) scale(1.04) !important;
+  box-shadow: 0 5px 16px rgba(255, 93, 143, 0.6) !important;
+  background: linear-gradient(135deg, #FF477E 0%, #FF758F 100%) !important;
+}
+
+/* Button 2: Save to Vault */
+.rcap-btn-save-trigger {
+  background: linear-gradient(135deg, rgba(6, 214, 160, 0.85) 0%, rgba(46, 196, 182, 0.85) 100%) !important;
+  color: #03382F !important;
+  box-shadow: 0 3px 10px rgba(6, 214, 160, 0.3) !important;
+  flex: 1 !important;
+}
+
+.rcap-btn-save-trigger:hover {
+  transform: translateY(-2px) scale(1.04) !important;
+  box-shadow: 0 5px 14px rgba(6, 214, 160, 0.45) !important;
+  background: linear-gradient(135deg, #10F0B5 0%, #38D9CA 100%) !important;
+}
+
+/* Button 3: Vault / Load */
+.rcap-btn-load-trigger {
+  background: linear-gradient(135deg, rgba(157, 78, 221, 0.85) 0%, rgba(123, 44, 191, 0.85) 100%) !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 3px 10px rgba(157, 78, 221, 0.35) !important;
+  flex: 1 !important;
+}
+
+.rcap-btn-load-trigger:hover {
+  transform: translateY(-2px) scale(1.04) !important;
+  box-shadow: 0 5px 14px rgba(157, 78, 221, 0.5) !important;
+  background: linear-gradient(135deg, #B565F5 0%, #8E36D9 100%) !important;
+}
+
+/* Mini Controls: Switcher & Close */
+.rcap-mini-controls {
+  display: flex !important;
+  align-items: center !important;
+  gap: 4px !important;
+  flex-shrink: 0 !important;
+}
+
+.rcap-toggle-orientation-btn,
+.rcap-close-btn {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  color: #FFB3C1 !important;
+  cursor: pointer !important;
+  width: 22px !important;
+  height: 22px !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 11px !important;
+  font-weight: 800 !important;
+  padding: 0 !important;
+  transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+  outline: none !important;
+}
+
+.rcap-toggle-orientation-btn:hover {
+  background: rgba(199, 125, 255, 0.3) !important;
+  color: #FFFFFF !important;
+  transform: rotate(180deg) scale(1.1) !important;
+}
+
+.rcap-close-btn:hover {
+  background: #FF5D8F !important;
+  color: #FFFFFF !important;
+  transform: scale(1.12) rotate(90deg) !important;
+}
+
+/* Detected Title Preview Pill (Slim translucent pill) */
+.rcap-detected-preview {
+  font-size: 10.5px !important;
+  font-weight: 600 !important;
+  color: #FFE5EC !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  background: rgba(255, 255, 255, 0.07) !important;
+  border: 1px solid rgba(255, 182, 193, 0.2) !important;
+  padding: 3.5px 8px !important;
+  border-radius: 10px !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  transition: all 0.2s ease !important;
+}
+
+.rcap-detected-preview:hover {
+  background: rgba(255, 255, 255, 0.12) !important;
+  border-color: rgba(255, 182, 193, 0.35) !important;
+}
+
+/* 🌸 3. Code Vault Modal: Translucent Frosted Card 🌸 */
+.rcap-load-modal {
+  background: rgba(24, 16, 40, 0.75) !important;
+  backdrop-filter: blur(24px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(180%) !important;
+  color: #FFFFFF !important;
+  border: 1.5px solid rgba(255, 117, 143, 0.4) !important;
+  border-radius: 20px !important;
+  padding: 14px !important;
+  box-shadow: 0 16px 45px rgba(10, 4, 20, 0.7), 0 0 24px rgba(255, 117, 143, 0.25) !important;
+  width: 320px !important;
+  max-height: 480px !important;
+  overflow-y: auto !important;
+  box-sizing: border-box !important;
+  animation: rcapModalPop 0.22s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+}
+
+.rcap-load-modal.hidden {
+  display: none !important;
+}
+
+@keyframes rcapModalPop {
+  from { opacity: 0; transform: translateY(10px) scale(0.95); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.rcap-modal-header {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+  padding-bottom: 8px !important;
+  margin-bottom: 10px !important;
+}
+
+.rcap-modal-title-wrap {
+  display: flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  font-size: 13px !important;
+  font-weight: 800 !important;
+  background: linear-gradient(90deg, #FF758F, #C77DFF) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
+
+.rcap-slots-badge {
+  background: rgba(255, 117, 143, 0.2) !important;
+  color: #FF758F !important;
+  border: 1px solid rgba(255, 117, 143, 0.35) !important;
+  font-size: 9.5px !important;
+  font-weight: 800 !important;
+  padding: 2px 7px !important;
+  border-radius: 9999px !important;
+}
+
+.rcap-modal-close-btn {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border: none !important;
+  color: #FFB3C1 !important;
+  font-size: 12px !important;
+  font-weight: 800 !important;
+  cursor: pointer !important;
+  width: 22px !important;
+  height: 22px !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transition: all 0.2s ease !important;
+}
+
+.rcap-modal-close-btn:hover {
+  background: #FF5D8F !important;
+  color: #FFFFFF !important;
+  transform: rotate(90deg) scale(1.1) !important;
+}
+
+/* Save Current Code Action Banner inside Modal */
+.rcap-btn-save-current {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 6px !important;
+  width: 100% !important;
+  background: linear-gradient(135deg, rgba(255, 117, 143, 0.9) 0%, rgba(255, 143, 163, 0.9) 100%) !important;
+  border: none !important;
+  color: #2D0816 !important;
+  padding: 8px 12px !important;
+  border-radius: 12px !important;
+  font-size: 11.5px !important;
+  font-weight: 800 !important;
+  cursor: pointer !important;
+  box-shadow: 0 4px 12px rgba(255, 117, 143, 0.35) !important;
+  transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+  margin-bottom: 12px !important;
+  box-sizing: border-box !important;
+}
+
+.rcap-btn-save-current:hover {
+  transform: translateY(-2px) scale(1.02) !important;
+  box-shadow: 0 6px 18px rgba(255, 117, 143, 0.5) !important;
+  background: linear-gradient(135deg, #FF5D8F 0%, #FF758F 100%) !important;
+  color: #FFFFFF !important;
+}
+
+.rcap-section-header {
+  font-size: 10.5px !important;
+  font-weight: 800 !important;
+  color: #FFB3C1 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.5px !important;
+  margin-bottom: 6px !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 4px !important;
+}
+
+/* Saved History Cards */
+.rcap-history-list {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 6px !important;
+  margin-bottom: 12px !important;
+}
+
+.rcap-history-card {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 117, 143, 0.2) !important;
+  border-radius: 12px !important;
+  padding: 8px 10px !important;
+  gap: 6px !important;
+  transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+  box-sizing: border-box !important;
+}
+
+.rcap-history-card:hover {
+  background: rgba(255, 255, 255, 0.09) !important;
+  border-color: #FF758F !important;
+  transform: translateY(-1px) !important;
+}
+
+.rcap-history-left {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  overflow: hidden !important;
+}
+
+.rcap-history-badge {
+  font-size: 10px !important;
+  font-weight: 800 !important;
+  width: 20px !important;
+  height: 20px !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-shrink: 0 !important;
+  color: #FFFFFF !important;
+}
+
+.rcap-badge-1 { background: linear-gradient(135deg, #FF5D8F, #FF758F) !important; }
+.rcap-badge-2 { background: linear-gradient(135deg, #9D4EDD, #C77DFF) !important; }
+.rcap-badge-3 { background: linear-gradient(135deg, #00B4D8, #48CAE4) !important; }
+
+.rcap-history-info {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 1px !important;
+  overflow: hidden !important;
+}
+
+.rcap-history-title {
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  color: #FFFFFF !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  max-width: 160px !important;
+}
+
+.rcap-history-meta {
+  font-size: 9.5px !important;
+  color: #C77DFF !important;
+  font-weight: 500 !important;
+}
+
+.rcap-btn-load-item {
+  background: linear-gradient(135deg, #7B2CBF, #9D4EDD) !important;
+  border: none !important;
+  color: #FFFFFF !important;
+  padding: 4px 10px !important;
+  border-radius: 9999px !important;
+  font-size: 10.5px !important;
+  font-weight: 800 !important;
+  cursor: pointer !important;
+  transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+  white-space: nowrap !important;
+  box-shadow: 0 2px 6px rgba(123, 44, 191, 0.35) !important;
+}
+
+.rcap-btn-load-item:hover {
+  transform: scale(1.06) !important;
+  background: linear-gradient(135deg, #9D4EDD, #C77DFF) !important;
+  box-shadow: 0 3px 10px rgba(199, 125, 255, 0.45) !important;
+}
+
+.rcap-history-empty {
+  font-size: 10.5px !important;
+  color: #FFB3C1 !important;
+  padding: 10px !important;
+  background: rgba(255, 255, 255, 0.03) !important;
+  border: 1px dashed rgba(255, 117, 143, 0.25) !important;
+  border-radius: 10px !important;
+  text-align: center !important;
+}
+
+/* Snippets Section */
+.rcap-snippet-section {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 6px !important;
+}
+
+.rcap-lang-chips {
+  display: flex !important;
+  gap: 5px !important;
+  overflow-x: auto !important;
+  padding-bottom: 2px !important;
+}
+
+.rcap-lang-chip {
+  background: rgba(255, 255, 255, 0.07) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  color: #FFE5EC !important;
+  padding: 3px 8px !important;
+  border-radius: 9999px !important;
+  font-size: 10px !important;
+  font-weight: 700 !important;
+  cursor: pointer !important;
+  transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+  white-space: nowrap !important;
+}
+
+.rcap-lang-chip:hover {
+  background: rgba(255, 255, 255, 0.14) !important;
+  transform: translateY(-1px) !important;
+}
+
+.rcap-lang-chip.active {
+  background: linear-gradient(135deg, #FF758F 0%, #C77DFF 100%) !important;
+  color: #FFFFFF !important;
+  border-color: transparent !important;
+  box-shadow: 0 2px 8px rgba(255, 117, 143, 0.35) !important;
+}
+
+.rcap-snippet-code-box {
+  background: rgba(13, 9, 20, 0.8) !important;
+  border: 1px solid rgba(199, 125, 255, 0.25) !important;
+  border-radius: 10px !important;
+  padding: 8px !important;
+  font-family: Consolas, "JetBrains Mono", monospace !important;
+  font-size: 9.5px !important;
+  color: #70D6FF !important;
+  max-height: 75px !important;
+  overflow-y: auto !important;
+  white-space: pre !important;
+}
+
+.rcap-btn-insert {
+  background: linear-gradient(135deg, rgba(199, 125, 255, 0.9) 0%, rgba(123, 44, 191, 0.9) 100%) !important;
+  color: #FFFFFF !important;
+  border: none !important;
+  padding: 7px 12px !important;
+  border-radius: 10px !important;
+  font-size: 11px !important;
+  font-weight: 800 !important;
+  cursor: pointer !important;
+  box-shadow: 0 3px 10px rgba(123, 44, 191, 0.35) !important;
+  transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+}
+
+.rcap-btn-insert:hover {
+  transform: translateY(-1px) scale(1.02) !important;
+  background: linear-gradient(135deg, #E0AAFF 0%, #9D4EDD 100%) !important;
+  box-shadow: 0 5px 14px rgba(157, 78, 221, 0.5) !important;
+}
+
+/* Cute Bubbly Toast Notifications */
+.rcap-toast {
+  position: fixed !important;
+  bottom: 85px !important;
+  right: 20px !important;
+  z-index: 2147483647 !important;
+  background: rgba(26, 16, 42, 0.75) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  color: #FFE5EC !important;
+  border: 1.5px solid rgba(255, 117, 143, 0.6) !important;
+  border-radius: 9999px !important;
+  padding: 7px 16px !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  box-shadow: 0 8px 20px rgba(255, 117, 143, 0.35) !important;
+  animation: rcapToastPop 0.22s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+}
+
+@keyframes rcapToastPop {
+  from { opacity: 0; transform: translateY(8px) scale(0.92); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
