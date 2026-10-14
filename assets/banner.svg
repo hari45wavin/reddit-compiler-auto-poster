@@ -1,0 +1,107 @@
+<svg width="1200" height="420" viewBox="0 0 1200 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#120B1E"/>
+      <stop offset="50%" stop-color="#1B122C"/>
+      <stop offset="100%" stop-color="#2D113B"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FF5D8F"/>
+      <stop offset="50%" stop-color="#FF758F"/>
+      <stop offset="100%" stop-color="#C77DFF"/>
+    </linearGradient>
+    <radialGradient id="glowCircle" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FF758F" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#7B2CBF" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="dropShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="420" rx="20" fill="url(#bgGrad)"/>
+  <circle cx="1020" cy="120" r="300" fill="url(#glowCircle)"/>
+  <circle cx="180" cy="340" r="240" fill="url(#glowCircle)"/>
+
+  <!-- Left Side: Brand & Title -->
+  <g transform="translate(80, 80)">
+    <!-- Badge -->
+    <rect width="210" height="34" rx="17" fill="rgba(255, 93, 143, 0.15)" stroke="#FF758F" stroke-width="1.5"/>
+    <text x="16" y="22" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700" fill="#FF758F" letter-spacing="1">✨ MANIFEST V3 POWERED</text>
+
+    <!-- Main Title -->
+    <text x="0" y="85" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="44" font-weight="900" fill="#FFFFFF" letter-spacing="-0.5">
+      Reddit Compiler Auto-Poster
+    </text>
+
+    <!-- Tagline -->
+    <text x="0" y="125" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="600" fill="url(#accentGrad)">
+      1-Click Solution Code, Dynamic Titles &amp; Problem Links to Reddit!
+    </text>
+
+    <!-- Subtitle description -->
+    <text x="0" y="165" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14.5" font-weight="400" fill="#D0C4E8">
+      Supports LeetCode, Programiz, OnlineGDB, Replit • 3-Slot Code Vault • Zero Duplicate Paste
+    </text>
+
+    <!-- Mini Feature Pills -->
+    <g transform="translate(0, 195)">
+      <!-- Pill 1 -->
+      <rect x="0" y="0" width="130" height="32" rx="16" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.15)"/>
+      <text x="14" y="20" font-family="sans-serif" font-size="12" font-weight="600" fill="#FFF">⌨️ Ctrl+Alt+R</text>
+
+      <!-- Pill 2 -->
+      <rect x="142" y="0" width="150" height="32" rx="16" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.15)"/>
+      <text x="156" y="20" font-family="sans-serif" font-size="12" font-weight="600" fill="#FFF">💡 Dynamic Titles</text>
+
+      <!-- Pill 3 -->
+      <rect x="304" y="0" width="150" height="32" rx="16" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.15)"/>
+      <text x="318" y="20" font-family="sans-serif" font-size="12" font-weight="600" fill="#FFF">📂 3-Slot Vault</text>
+
+      <!-- Pill 4 -->
+      <rect x="466" y="0" width="140" height="32" rx="16" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.15)"/>
+      <text x="480" y="20" font-family="sans-serif" font-size="12" font-weight="600" fill="#FFF">⚡ Sub-120ms</text>
+    </g>
+  </g>
+
+  <!-- Right Side: Cute Anime Snoo Mascot Illustration -->
+  <g transform="translate(870, 70)" filter="url(#dropShadow)">
+    <!-- Halo glow -->
+    <circle cx="140" cy="140" r="130" fill="url(#glowCircle)"/>
+
+    <!-- Mascot Face -->
+    <ellipse cx="140" cy="155" rx="100" ry="85" fill="#FFFFFF" stroke="#FF758F" stroke-width="7"/>
+
+    <!-- Anime Ears -->
+    <polygon points="70,110 40,40 105,70" fill="#FF758F" stroke="#FFFFFF" stroke-width="5"/>
+    <polygon points="74,100 52,55 98,75" fill="#FFE5EC"/>
+    <polygon points="210,110 240,40 175,70" fill="#FF758F" stroke="#FFFFFF" stroke-width="5"/>
+    <polygon points="206,100 228,55 182,75" fill="#FFE5EC"/>
+
+    <!-- Antenna with Star -->
+    <path d="M140 70 Q 145 35 175 25" stroke="#FF758F" stroke-width="8" fill="none" stroke-linecap="round"/>
+    <circle cx="180" cy="22" r="15" fill="#FFD166" stroke="#FFFFFF" stroke-width="3"/>
+
+    <!-- Kawaii Eyes -->
+    <ellipse cx="108" cy="145" rx="19" ry="24" fill="#2B193D"/>
+    <circle cx="102" cy="135" r="9" fill="#FFFFFF"/>
+    <circle cx="116" cy="153" r="4" fill="#FFFFFF"/>
+
+    <ellipse cx="172" cy="145" rx="19" ry="24" fill="#2B193D"/>
+    <circle cx="166" cy="135" r="9" fill="#FFFFFF"/>
+    <circle cx="180" cy="153" r="4" fill="#FFFFFF"/>
+
+    <!-- Blush -->
+    <ellipse cx="80" cy="170" rx="15" ry="9" fill="#FF8FA3" opacity="0.8"/>
+    <ellipse cx="200" cy="170" rx="15" ry="9" fill="#FF8FA3" opacity="0.8"/>
+
+    <!-- Cat Mouth -->
+    <path d="M125 168 Q 133 178 140 168 Q 147 178 155 168" stroke="#FF477E" stroke-width="6" fill="none" stroke-linecap="round"/>
+
+    <!-- Floating Sparkles -->
+    <text x="20" y="60" font-size="28" fill="#FFD166">✦</text>
+    <text x="240" y="230" font-size="26" fill="#C77DFF">✨</text>
+    <text x="20" y="240" font-size="22" fill="#FF758F">🌸</text>
+  </g>
+</svg>
