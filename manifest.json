@@ -1,0 +1,77 @@
+{
+  "manifest_version": 3,
+  "name": "Reddit Code Poster",
+  "version": "1.4.0",
+  "description": "Automatically sets Reddit profile and title from code comments when sharing from online compilers.",
+  "icons": {
+    "16": "icons/icon-16.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  },
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+      "16": "icons/icon-16.png",
+      "48": "icons/icon-48.png",
+      "128": "icons/icon-128.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": [
+    "storage",
+    "tabs",
+    "scripting"
+  ],
+  "host_permissions": [
+    "*://*.reddit.com/*",
+    "*://reddit.com/*",
+    "<all_urls>"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "exclude_matches": [
+        "*://*.reddit.com/*",
+        "*://reddit.com/*",
+        "*://*.google.com/*",
+        "*://google.com/*",
+        "*://*.youtube.com/*",
+        "*://youtube.com/*",
+        "*://*.chatgpt.com/*",
+        "*://chatgpt.com/*",
+        "*://*.openai.com/*",
+        "*://claude.ai/*",
+        "*://*.twitter.com/*",
+        "*://*.x.com/*",
+        "*://*.facebook.com/*",
+        "*://*.instagram.com/*",
+        "*://*.netflix.com/*",
+        "*://*.amazon.com/*"
+      ],
+      "js": [
+        "content/compiler.js"
+      ],
+      "css": [
+        "content/compiler.css"
+      ],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": [
+        "*://*.reddit.com/*",
+        "*://reddit.com/*"
+      ],
+      "js": [
+        "content/reddit.js"
+      ],
+      "css": [
+        "content/reddit.css"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}
