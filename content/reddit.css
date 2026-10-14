@@ -1,0 +1,102 @@
+/* 🌸 Gen-Z Cute Aesthetic - Reddit Floating Pill 🌸 */
+
+.rcap-reddit-floating-pill {
+  position: fixed !important;
+  bottom: 24px !important;
+  right: 24px !important;
+  z-index: 2147483647 !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  background: linear-gradient(145deg, rgba(32, 22, 48, 0.94) 0%, rgba(18, 14, 28, 0.96) 100%) !important;
+  backdrop-filter: blur(20px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
+  border: 1.5px solid rgba(255, 117, 143, 0.45) !important;
+  border-radius: 9999px !important;
+  padding: 8px 16px !important;
+  box-shadow: 0 10px 32px rgba(15, 8, 25, 0.75), 0 0 20px rgba(255, 117, 143, 0.3) !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Plus Jakarta Sans", sans-serif !important;
+  color: #FFFFFF !important;
+  font-size: 12px !important;
+  user-select: none !important;
+  animation: rcapFadeIn 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+  box-sizing: border-box !important;
+  transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+}
+
+.rcap-reddit-floating-pill:hover {
+  transform: translateY(-2px) scale(1.02) !important;
+  border-color: rgba(255, 117, 143, 0.75) !important;
+  box-shadow: 0 14px 40px rgba(15, 8, 25, 0.8), 0 0 28px rgba(255, 117, 143, 0.4) !important;
+}
+
+.rcap-reddit-badge {
+  background: linear-gradient(135deg, #FF5D8F 0%, #FF758F 100%) !important;
+  color: #FFFFFF !important;
+  padding: 4px 10px !important;
+  border-radius: 9999px !important;
+  font-weight: 800 !important;
+  font-size: 11px !important;
+  letter-spacing: 0.3px !important;
+  white-space: nowrap !important;
+  box-shadow: 0 2px 8px rgba(255, 93, 143, 0.4) !important;
+}
+
+.rcap-reddit-title-text {
+  font-weight: 600 !important;
+  color: #FFE5EC !important;
+  max-width: 260px !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  font-size: 12px !important;
+}
+
+.rcap-reddit-status {
+  font-size: 11px !important;
+  font-weight: 800 !important;
+  padding: 3px 8px !important;
+  border-radius: 9999px !important;
+  white-space: nowrap !important;
+}
+
+.rcap-status-ready {
+  background: rgba(6, 214, 160, 0.2) !important;
+  color: #06D6A0 !important;
+  border: 1px solid rgba(6, 214, 160, 0.4) !important;
+}
+
+.rcap-status-pending {
+  background: rgba(255, 117, 143, 0.2) !important;
+  color: #FF758F !important;
+  border: 1px solid rgba(255, 117, 143, 0.4) !important;
+}
+
+.rcap-reapply-btn {
+  background: linear-gradient(135deg, #9D4EDD 0%, #7B2CBF 100%) !important;
+  border: none !important;
+  color: #FFFFFF !important;
+  padding: 5px 12px !important;
+  border-radius: 9999px !important;
+  font-size: 11px !important;
+  font-weight: 800 !important;
+  cursor: pointer !important;
+  transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+  white-space: nowrap !important;
+  box-shadow: 0 2px 8px rgba(157, 78, 221, 0.4) !important;
+}
+
+.rcap-reapply-btn:hover {
+  transform: scale(1.08) !important;
+  background: linear-gradient(135deg, #B565F5 0%, #8E36D9 100%) !important;
+  box-shadow: 0 4px 12px rgba(157, 78, 221, 0.55) !important;
+}
+
+.rcap-reapply-btn:active {
+  transform: scale(0.96) !important;
+}
+
+@keyframes rcapFadeIn {
+  from { opacity: 0; transform: translateY(12px) scale(0.92); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
